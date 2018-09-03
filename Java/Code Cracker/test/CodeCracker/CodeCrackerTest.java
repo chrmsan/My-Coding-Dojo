@@ -19,5 +19,20 @@ class CodeCrackerTest {
 		assertEquals(expectedResult, result);
 		
 	}
+	
+	@Test
+	@DisplayName("Encrypt 'hello' ")
+	void returnHello() {
+		CodeCracker codecracker = new CodeCracker();
+		String character = "hello";
+		
+		String result = codecracker.encrypt(character);
+		String expectedResult = "$£aad";
+		
+		assertEquals(expectedResult, result);
+		
+	}
+	
+	
 
 }
