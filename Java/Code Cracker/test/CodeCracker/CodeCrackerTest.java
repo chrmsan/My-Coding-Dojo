@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 class CodeCrackerTest {
 
 	@Test
-	@DisplayName("Encrypt a single alphabetic character")
-	void returnACharacter() {
+	@DisplayName("Encrypt a single alphabetic character, a")
+	void returnACharacterA() {
 		CodeCracker codecracker = new CodeCracker();
 		String character = "a";
 		
@@ -20,6 +20,19 @@ class CodeCrackerTest {
 		
 	}
 	
+	@Test
+	@DisplayName("Encrypt a single alphabetic character, b")
+	void returnACharacterB() {
+		CodeCracker codecracker = new CodeCracker();
+		String character = "b";
+		
+		String result = codecracker.encrypt(character);
+		String expectedResult = ")";
+		
+		assertEquals(expectedResult, result);
+		
+	}
+	/*
 	@Test
 	@DisplayName("Encrypt 'hello' ")
 	void returnHello() {
@@ -33,6 +46,6 @@ class CodeCrackerTest {
 		
 	}
 	
-	
+	*/
 
 }
